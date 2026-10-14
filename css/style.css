@@ -9,9 +9,9 @@
     --card: #ffffff;
     --ink: #202b27;
     --text: #202b27;
-    --muted: #7a857f;
+    --muted: #5f6a64;
     --line: #e6e7e2;
-    --sage: #5f8a72;
+    --sage: #4c7660;
     --sage-bg: #eaf1ec;
     --sand: #b98b4e;
     --sand-bg: #f6efe3;
@@ -539,7 +539,7 @@
     box-shadow: var(--shadow-sm);
   }
 
-  .-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 900px; }
+  .synthese-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 900px; }
 
   .synthese-table th {
     background: var(--sage-bg);
@@ -1050,3 +1050,116 @@
     letter-spacing: 0.1em;
     align-items: center;
   }
+
+/* =======================================================================
+   AMÉLIORATIONS — accessibilité, formulaire, nouvelles sections
+   ======================================================================= */
+
+/* Accessibilité */
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 2000;
+  background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 10px;
+  font-weight: 700; font-size: 13px; text-decoration: none; transition: top 0.2s;
+}
+.skip-link:focus { top: 12px; }
+
+:focus-visible { outline: 3px solid #4f6df5; outline-offset: 3px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Petits utilitaires (remplacent les styles inline) */
+.h3-spaced { margin-top: 50px; }
+.pres-text strong { color: var(--text); }
+.skill-group-last { margin-bottom: 0; }
+.skill-group h3.grp-label { font-family: 'DM Sans', sans-serif; }
+.pdf-banner-icon { font-size: 20px; color: #8a6400; }
+.pdf-banner a { color: #8a6400; }
+.btn-block { justify-content: center; width: 100%; margin-top: 6px; }
+button.btn-primary, button.btn-ghost { font-size: 14px; }
+
+/* Projets : image cliquable = vrai bouton, cartes, tags */
+button.project-img { border: 0; padding: 0; width: 100%; display: flex; overflow: hidden; }
+.project-img.project-icon { font-size: 44px; }
+.project-icon i { transition: transform 0.3s; }
+.project-card:hover .project-icon i { transform: scale(1.12); }
+.project-card-soon { opacity: 0.65; }
+.project-card-soon:hover { transform: none; box-shadow: var(--shadow-sm); }
+.proj-tags { margin: 2px 0 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  margin: 0; padding: 3px 10px; border-radius: 99px;
+  background: var(--paper); border: 1px solid var(--line);
+  font-size: 11px; font-weight: 600; color: var(--muted);
+}
+h3.project-title { margin-bottom: 10px; }
+
+/* Synthèse : blocs d'info en grille */
+#synthese .info-row { margin-top: 0; }
+
+/* Veille */
+.veille-card-wide { grid-column: 1 / -1; }
+h3.v-title { margin-bottom: 10px; }
+.v-list { list-style: none; display: grid; gap: 8px; }
+.v-list li { font-size: 13px; color: var(--muted); line-height: 1.6; padding-left: 18px; position: relative; }
+.v-list li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--grad); }
+.v-list strong { color: var(--ink); }
+.v-list a { color: var(--blue); font-weight: 600; text-decoration: none; }
+.v-list a:hover { text-decoration: underline; }
+
+/* Certifications / Compétences : titres h3 */
+h3.cert-title { font-size: 14px; }
+
+/* Contact */
+.contact-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: start; }
+.contact-grid-single { grid-template-columns: 1fr; margin-bottom: 0; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-field label {
+  display: block; margin-bottom: 6px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted);
+}
+.form-field input, .form-field textarea {
+  width: 100%; padding: 12px 14px;
+  border: 2px solid var(--line); border-radius: 12px; background: #fff;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--ink);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-field textarea { resize: vertical; min-height: 120px; }
+.form-field input:hover, .form-field textarea:hover { border-color: #c9ccc5; }
+.form-field input:focus, .form-field textarea:focus {
+  outline: none; border-color: #4f6df5; box-shadow: 0 0 0 4px rgba(79,109,245,0.15);
+}
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-note { font-size: 12px; color: var(--muted); text-align: center; }
+.form-note a { color: var(--blue); font-weight: 600; }
+.btn-primary:disabled { opacity: 0.6; cursor: wait; transform: none; }
+#my-form-status { font-size: 14px; font-weight: 700; text-align: center; min-height: 1.4em; color: var(--ink); }
+#my-form-status.ok { color: #2e7d32; }
+#my-form-status.error { color: #c62828; }
+.contact-item { min-width: 0; }
+.contact-val { overflow-wrap: anywhere; }
+
+/* Mentions légales */
+.legal h3 { font-family: 'Poppins', sans-serif; font-size: 15px; margin: 22px 0 8px; color: var(--ink); }
+.legal h3:first-child { margin-top: 0; }
+.legal p { font-size: 14px; line-height: 1.8; color: #40493f; }
+.legal a { color: var(--blue); font-weight: 600; }
+
+/* Footer : liens légaux (ancres) */
+.footer-legal a { display: inline-block; padding: 2px 0; }
+
+/* Mobile — la barre d'onglets doit être affichée ici : la règle .tabbar{display:none} plus haut
+   dans le fichier écrasait l'ancienne version, et le mobile n'avait AUCUNE navigation. */
+@media (max-width: 900px) {
+  .tabbar { display: block; }
+  .hero-stats { gap: 28px; flex-wrap: wrap; }
+  .section-title { font-size: 26px; }
+  .glass-card, .card { padding: 22px; }
+  .tab-btn { padding: 8px 14px 6px; }
+  .tab-btn.active { color: var(--sage); }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 28px; }
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+}

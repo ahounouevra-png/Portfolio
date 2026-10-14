@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio AHOUNOU Evrard</title>
+  <title>AHOUNOU Evrard — Portfolio BTS SIO SISR</title>
+  <meta name="description" content="Portfolio d'AHOUNOU Evrard, étudiant en BTS SIO option SISR (My Digital School Rennes) : réseaux, virtualisation, cybersécurité. Projets, certifications Cisco, veille technologique et CV.">
+  <meta name="author" content="AHOUNOU Evrard">
+  <meta name="theme-color" content="#4f6df5">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="AHOUNOU Evrard — Portfolio BTS SIO SISR">
+  <meta property="og:description" content="Étudiant en BTS SIO option SISR, en recherche d'alternance. Projets, certifications Cisco, veille et CV.">
   <link rel="icon" type="image/png" href="image/favicon.png">
 
   <!-- Polices -->
@@ -19,29 +26,31 @@
 </head>
 <body>
 
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
 <!-- SIDEBAR -->
-<nav class="sidebar">
+<nav class="sidebar" aria-label="Navigation principale">
   <div class="sidebar-header">
     <div class="avatar-wrap">
-      <img src="image/ma_photo.jpg" alt="AHOUNOU Evrard">
+      <img src="image/ma_photo.jpg" alt="Photo d'AHOUNOU Evrard" width="720" height="705">
     </div>
     <div class="sidebar-name">AHOUNOU Evrard</div>
     <div class="sidebar-role">BTS SIO · SISR</div>
   </div>
   <ul class="nav-links">
-    <li><button data-section="accueil" class="active"><i class="fa-solid fa-house nav-icon"></i><span>Accueil</span></button></li>
-    <li><button data-section="presentation"><i class="fa-solid fa-user nav-icon"></i><span>Présentation</span></button></li>
-    <li><button data-section="competences"><i class="fa-solid fa-wrench nav-icon"></i><span>Compétences</span></button></li>
-    <li><button data-section="projets"><i class="fa-solid fa-briefcase nav-icon"></i><span>Projets</span></button></li>
-    <li><button data-section="synthese"><i class="fa-solid fa-chart-column nav-icon"></i><span>Synthèse</span></button></li>
-    <li><button data-section="veille"><i class="fa-solid fa-magnifying-glass nav-icon"></i><span>Veille Techno.</span></button></li>
-    <li><button data-section="certifications"><i class="fa-solid fa-award nav-icon"></i><span>Certifications</span></button></li>
-    <li><button data-section="cv"><i class="fa-solid fa-file-lines nav-icon"></i><span>CV</span></button></li>
-    <li><button data-section="contact"><i class="fa-solid fa-envelope nav-icon"></i><span>Contact</span></button></li>
+    <li><button data-section="accueil" class="active"><i class="fa-solid fa-house nav-icon" aria-hidden="true"></i><span>Accueil</span></button></li>
+    <li><button data-section="presentation"><i class="fa-solid fa-user nav-icon" aria-hidden="true"></i><span>Présentation</span></button></li>
+    <li><button data-section="competences"><i class="fa-solid fa-wrench nav-icon" aria-hidden="true"></i><span>Compétences</span></button></li>
+    <li><button data-section="projets"><i class="fa-solid fa-briefcase nav-icon" aria-hidden="true"></i><span>Projets</span></button></li>
+    <li><button data-section="synthese"><i class="fa-solid fa-chart-column nav-icon" aria-hidden="true"></i><span>Synthèse</span></button></li>
+    <li><button data-section="veille"><i class="fa-solid fa-magnifying-glass nav-icon" aria-hidden="true"></i><span>Veille techno.</span></button></li>
+    <li><button data-section="certifications"><i class="fa-solid fa-award nav-icon" aria-hidden="true"></i><span>Certifications</span></button></li>
+    <li><button data-section="cv"><i class="fa-solid fa-file-lines nav-icon" aria-hidden="true"></i><span>CV</span></button></li>
+    <li><button data-section="contact"><i class="fa-solid fa-envelope nav-icon" aria-hidden="true"></i><span>Contact</span></button></li>
   </ul>
 </nav>
 
-<main class="main">
+<main class="main" id="contenu">
 
   <!-- ACCUEIL -->
   <section id="accueil" class="active">
@@ -50,17 +59,17 @@
       <div class="hero-blob hero-blob-2"></div>
       <div class="hero-tag">
         <div class="hero-dot"></div>
-        Portfolio Session 2025-2027
+        Portfolio · Session 2025-2027
       </div>
-      <h1>Bonjour,<br>Je m'appelle <span>AHOUNOU Evrard</span></h1>
+      <h1>Bonjour,<br>je m'appelle <span>AHOUNOU Evrard</span></h1>
       <p class="hero-sub">Étudiant en BTS SIO, option SISR — passionné par l'administration réseau, la virtualisation et la cybersécurité. À la recherche d'une alternance pour mettre mes compétences techniques au service d'une infrastructure IT.</p>
 
       <div class="hero-btns">
-        <a href="dossier/AHOUNOU_EvrardCV.pdf" target="_blank" class="btn-primary">
-          <i class="fa-solid fa-file-pdf"></i> Télécharger mon CV
+        <a href="dossier/AHOUNOU_EvrardCV.pdf" target="_blank" rel="noopener" class="btn-primary">
+          <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Télécharger mon CV
         </a>
-        <button class="btn-ghost" onclick="showSection('contact')">
-          <i class="fa-solid fa-envelope"></i> Me contacter
+        <button class="btn-ghost" data-section="contact">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i> Me contacter
         </button>
       </div>
       <div class="hero-stats">
@@ -69,8 +78,8 @@
           <div class="stat-label">Certifications Cisco</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">18</div>
-          <div class="stat-label">Compétences</div>
+          <div class="stat-num">8</div>
+          <div class="stat-label">Projets &amp; réalisations</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">SISR</div>
@@ -79,21 +88,21 @@
       </div>
     </div>
 
-    <div class="h3-styled" style="margin-top:50px;">Ce que je fais</div>
+    <div class="h3-styled h3-spaced">Ce que je fais</div>
     <div class="trio">
       <div class="trio-card c-yellow">
-        <div class="spark"><i class="fa-solid fa-globe"></i></div>
-        <h3>Réseaux & Infrastructure</h3>
+        <div class="spark"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+        <h3>Réseaux &amp; Infrastructure</h3>
         <p>Administration et configuration d'équipements réseaux. Conception et simulation d'infrastructures d'entreprise interconnectées et sécurisées.</p>
       </div>
       <div class="trio-card c-pink">
-        <div class="spark"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="spark"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
         <h3>Cybersécurité</h3>
         <p>Mise en œuvre des bonnes pratiques de sécurité informatique. Veille sur les vulnérabilités (CVE), application des directives de l'ANSSI et sécurisation des accès.</p>
       </div>
       <div class="trio-card c-blue">
-        <div class="spark"><i class="fa-solid fa-desktop"></i></div>
-        <h3>Systèmes & Web</h3>
+        <div class="spark"><i class="fa-solid fa-desktop" aria-hidden="true"></i></div>
+        <h3>Systèmes &amp; Web</h3>
         <p>Administration de serveurs (Windows/Linux), virtualisation, ainsi que déploiement et maintenance d'applications et sites web dynamiques.</p>
       </div>
     </div>
@@ -106,7 +115,7 @@
 
     <div class="glass-card">
       <p class="pres-text">
-        Je m'appelle <strong style="color:var(--text)">AHOUNOU Evrard</strong>, étudiant en BTS SIO (Services Informatiques aux Organisations) (option SISR). Je me forme à l'administration des réseaux, à la virtualisation, à la cybersécurité et à la gestion d'infrastructures. J'aime apprendre en pratiquant et je construis progressivement mes compétences à travers des projets concrets.
+        Je m'appelle <strong>AHOUNOU Evrard</strong>, étudiant en BTS SIO (Services Informatiques aux Organisations), option SISR. Je me forme à l'administration des réseaux, à la virtualisation, à la cybersécurité et à la gestion d'infrastructures. J'aime apprendre en pratiquant et je construis progressivement mes compétences à travers des projets concrets.
         <br><br>
         Mon objectif est de devenir un professionnel compétent et polyvalent dans le domaine de l'informatique, capable de gérer des systèmes complexes et de contribuer à la transformation numérique des organisations.
       </p>
@@ -118,7 +127,7 @@
         </div>
         <div class="info-block">
           <div class="info-label">Centre de formation</div>
-          <div class="info-val">MY DIGITALSCHOOL RENNES</div>
+          <div class="info-val">My Digital School Rennes</div>
         </div>
         <div class="info-block">
           <div class="info-label">Session</div>
@@ -135,47 +144,47 @@
 
     <div class="card">
       <div class="skill-group">
-        <div class="grp-label">Réseaux & Systèmes</div>
+        <h3 class="grp-label">Réseaux &amp; Systèmes</h3>
         <div class="skill-pills">
-          <span class="skill-pill"><i class="fa-solid fa-globe"></i> Administration réseaux</span>
-          <span class="skill-pill"><i class="fa-solid fa-server"></i> Virtualisation</span>
-          <span class="skill-pill"><i class="fa-brands fa-linux"></i> Linux</span>
-          <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Gestion DNS</span>
-          <span class="skill-pill"><i class="fa-solid fa-diagram-project"></i> Protocoles TCP/IP</span>
-          <span class="skill-pill"><i class="fa-brands fa-windows"></i> Windows/linux Server</span>
-          <span class="skill-pill"><i class="fa-solid fa-folder-tree"></i> Active Directory</span>
-          <span class="skill-pill"><i class="fa-solid fa-server"></i> Serveurs de virtualisation</span>
-          <span class="skill-pill"><i class="fa-solid fa-desktop"></i> Serveurs de surveillance</span>
-          <span class="skill-pill"><i class="fa-solid fa-chart-line"></i> Supervision (centreon, Zabbix)</span>
-          <span class="skill-pill"><i class="fa-brands fa-docker"></i> Conteneurisation (Docker)</span>
-          <span class="skill-pill"><i class="fa-solid fa-gears"></i> Gestion de configuration (Ansible)</span>
-          <span class="skill-pill"><i class="fa-solid fa-headset"></i> Gestion de parc et helpdesk</span>
+          <span class="skill-pill"><i class="fa-solid fa-globe" aria-hidden="true"></i> Administration réseaux</span>
+          <span class="skill-pill"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Protocoles TCP/IP</span>
+          <span class="skill-pill"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Gestion DNS</span>
+          <span class="skill-pill"><i class="fa-brands fa-windows" aria-hidden="true"></i> Windows Server</span>
+          <span class="skill-pill"><i class="fa-brands fa-linux" aria-hidden="true"></i> Linux / Linux Server</span>
+          <span class="skill-pill"><i class="fa-solid fa-folder-tree" aria-hidden="true"></i> Active Directory</span>
+          <span class="skill-pill"><i class="fa-solid fa-server" aria-hidden="true"></i> Virtualisation (Proxmox, VMware, VirtualBox)</span>
+          <span class="skill-pill"><i class="fa-solid fa-headset" aria-hidden="true"></i> Gestion de parc &amp; helpdesk</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <div class="grp-label">Sécurité</div>
+        <h3 class="grp-label">Supervision &amp; Automatisation</h3>
         <div class="skill-pills">
-          <span class="skill-pill"><i class="fa-solid fa-lock"></i> Cybersécurité</span>
-          <span class="skill-pill"><i class="fa-solid fa-shield-cat"></i> Bonnes pratiques ANSSI / CERT-FR</span>
-          <span class="skill-pill"><i class="fa-solid fa-fire-extinguisher"></i> Firewalls/pfsense</span>
-          <span class="skill-pill"><i class="fa-solid fa-key"></i> VPN</span>
-          <span class="skill-pill"><i class="fa-solid fa-box-archive"></i> Sauvegarde</span>
+          <span class="skill-pill"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Supervision (Centreon, Zabbix)</span>
+          <span class="skill-pill"><i class="fa-brands fa-docker" aria-hidden="true"></i> Conteneurisation (Docker)</span>
+          <span class="skill-pill"><i class="fa-solid fa-gears" aria-hidden="true"></i> Gestion de configuration (Ansible)</span>
+          <span class="skill-pill"><i class="fa-brands fa-github" aria-hidden="true"></i> Git / GitHub</span>
         </div>
       </div>
 
-      <div class="skill-group" style="margin-bottom:0;">
-        <div class="grp-label">Outils & Environnements</div>
+      <div class="skill-group">
+        <h3 class="grp-label">Sécurité</h3>
         <div class="skill-pills">
-          <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Cisco Packet Tracer</span>
-          <span class="skill-pill"><i class="fa-solid fa-graduation-cap"></i> Cisco NetAcad</span>
-          <span class="skill-pill"><i class="fa-solid fa-cubes"></i> VMware Workstation</span>
-          <span class="skill-pill"><i class="fa-solid fa-box"></i> VirtualBox</span>
-          <span class="skill-pill"><i class="fa-solid fa-shield-halved"></i> pfSense</span>
-          <span class="skill-pill"><i class="fa-solid fa-chart-simple"></i> Zabbix</span>
-          <span class="skill-pill"><i class="fa-solid fa-chart-pie"></i> Centreon</span>
-          <span class="skill-pill"><i class="fa-solid fa-code-compare"></i> Ansible</span>
-          <span class="skill-pill"><i class="fa-brands fa-github"></i> Git / GitHub</span>
+          <span class="skill-pill"><i class="fa-solid fa-lock" aria-hidden="true"></i> Cybersécurité</span>
+          <span class="skill-pill"><i class="fa-solid fa-shield-cat" aria-hidden="true"></i> Bonnes pratiques ANSSI / CERT-FR</span>
+          <span class="skill-pill"><i class="fa-solid fa-fire-extinguisher" aria-hidden="true"></i> Pare-feu (pfSense)</span>
+          <span class="skill-pill"><i class="fa-solid fa-key" aria-hidden="true"></i> VPN</span>
+          <span class="skill-pill"><i class="fa-solid fa-box-archive" aria-hidden="true"></i> Sauvegarde</span>
+        </div>
+      </div>
+
+      <div class="skill-group skill-group-last">
+        <h3 class="grp-label">Outils &amp; Environnements</h3>
+        <div class="skill-pills">
+          <span class="skill-pill"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Cisco Packet Tracer</span>
+          <span class="skill-pill"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Cisco NetAcad</span>
+          <span class="skill-pill"><i class="fa-solid fa-cubes" aria-hidden="true"></i> VMware Workstation</span>
+          <span class="skill-pill"><i class="fa-solid fa-box" aria-hidden="true"></i> VirtualBox</span>
         </div>
       </div>
     </div>
@@ -186,117 +195,127 @@
     <div class="section-label">Réalisations</div>
     <h2 class="section-title">Projets</h2>
 
-    <div class="h3-styled"><i class="fa-solid fa-microchip"></i> Hardware</div>
+    <div class="h3-styled"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Hardware</div>
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-img clickable" onclick="openLightbox('image/capture_de_la_pile_bios.png','Hardware','Localisation et extraction de la pile CMOS','Identification de l\'emplacement de la pile CMOS sur la carte mère et retrait propre afin de réinitialiser les paramètres du BIOS.')">
-          <img src="image/capture_de_la_pile_bios.png" alt="Pile CMOS" onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-battery-full\'></i>'">
-          <div class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-        </div>
+      <article class="project-card">
+        <button type="button" class="project-img clickable" data-lightbox
+                data-src="image/capture_de_la_pile_bios.png"
+                data-cat="Hardware"
+                data-title="Localisation et extraction de la pile CMOS"
+                data-desc="Identification de l'emplacement de la pile CMOS sur la carte mère et retrait propre afin de réinitialiser les paramètres du BIOS."
+                aria-label="Agrandir l'image : Localisation et extraction de la pile CMOS">
+          <img src="image/capture_de_la_pile_bios.png" alt="Pile CMOS sur une carte mère" width="473" height="456" loading="lazy">
+          <span class="zoom-hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+        </button>
         <div class="project-body">
           <div class="project-cat">Hardware</div>
-          <div class="project-title">Localisation et extraction de la pile CMOS</div>
+          <h3 class="project-title">Localisation et extraction de la pile CMOS</h3>
+          <div class="proj-tags"><span class="tag">BIOS</span><span class="tag">Matériel</span></div>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-img clickable" onclick="openLightbox('image/Montage serveur proxmox ','Hardware','Montage du serveur proxmox ','Dans le cadre de mon apprentissage en administration système et réseau, j’ai réalisé l’installation complète d’un serveur de virtualisation Proxmox chez moi sur une tour informatique que j’ai entièrement configurée et optimisée pour héberger plusieurs services                                              Travaux réalisés...').">
-          <img src="image/Montage d'un serveur proxmox.jpeg" alt="BIOS" onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-screwdriver-wrench\'></i>'">
-          <div class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-        </div>
+      </article>
+
+      <article class="project-card">
+        <button type="button" class="project-img clickable" data-lightbox
+                data-src="image/montage_serveur_proxmox.jpeg"
+                data-cat="Hardware"
+                data-title="Montage d'un serveur Proxmox"
+                data-desc="Dans le cadre de mon apprentissage en administration système et réseau, j'ai réalisé l'installation complète d'un serveur de virtualisation Proxmox chez moi, sur une tour informatique que j'ai entièrement configurée et optimisée pour héberger plusieurs services."
+                aria-label="Agrandir l'image : Montage d'un serveur Proxmox">
+          <img src="image/montage_serveur_proxmox.jpeg" alt="Tour informatique montée pour héberger un serveur Proxmox" width="2000" height="1125" loading="lazy">
+          <span class="zoom-hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+        </button>
         <div class="project-body">
           <div class="project-cat">Hardware</div>
-          <div class="project-title">Montage d'un serveur proxmox </div>
+          <h3 class="project-title">Montage d'un serveur Proxmox</h3>
+          <div class="proj-tags"><span class="tag">Proxmox VE</span><span class="tag">Virtualisation</span><span class="tag">Homelab</span></div>
         </div>
-      </div>
+      </article>
     </div>
 
     <hr class="section-sep">
 
-    <div class="h3-styled"><i class="fa-solid fa-laptop-code"></i> Software</div>
+    <div class="h3-styled"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Software</div>
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-img clickable" onclick="openLightbox('image/projet_portfolio.png','Software — Portfolio','Projet complet : HTML / CSS / Design / Responsive','Développement complet de ce portfolio personnel en HTML, CSS et JavaScript, avec une attention particulière portée au design et au responsive.')">
-          <img src="image/projet_portfolio.png" alt="Portfolio">
-          <div class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-        </div>
+      <article class="project-card">
+        <button type="button" class="project-img clickable" data-lightbox
+                data-src="image/projet_portfolio.png"
+                data-cat="Software — Portfolio"
+                data-title="Projet complet : HTML / CSS / Design / Responsive"
+                data-desc="Développement complet de ce portfolio personnel en HTML, CSS et JavaScript, avec une attention particulière portée au design et au responsive."
+                aria-label="Agrandir l'image : le portfolio">
+          <img src="image/projet_portfolio.png" alt="Capture d'écran du portfolio" width="1920" height="1020" loading="lazy">
+          <span class="zoom-hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+        </button>
         <div class="project-body">
           <div class="project-cat">Software — Portfolio</div>
-          <div class="project-title">Projet complet : HTML / CSS / Design / Responsive</div>
+          <h3 class="project-title">Projet complet : HTML / CSS / Design / Responsive</h3>
+          <div class="proj-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Responsive</span></div>
         </div>
-      </div>
+      </article>
     </div>
 
     <hr class="section-sep">
 
-    <div class="h3-styled"><i class="fa-solid fa-cloud-arrow-up"></i> Migration & Déploiement</div>
+    <div class="h3-styled"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> Migration &amp; Déploiement</div>
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-img" style="font-size:44px"><i class="fa-solid fa-rotate"></i></div>
+      <article class="project-card">
+        <div class="project-img project-icon"><i class="fa-solid fa-rotate" aria-hidden="true"></i></div>
         <div class="project-body">
           <div class="project-cat">DevOps — Migration</div>
-          <div class="project-title">Migration WordPress vers N0C</div>
-          <a class="table-link" href="https://ahounouevra-png.github.io/wordpress/" target="_blank"><i class="fa-solid fa-file-pdf"></i> Voir le document</a>
+          <h3 class="project-title">Migration WordPress vers N0C</h3>
+          <div class="proj-tags"><span class="tag">WordPress</span><span class="tag">Migration</span><span class="tag">N0C</span></div>
+          <a class="table-link" href="https://ahounouevra-png.github.io/wordpress/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Voir le document</a>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-img" style="font-size:44px"><i class="fa-solid fa-code"></i></div>
+      </article>
+      <article class="project-card">
+        <div class="project-img project-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
         <div class="project-body">
           <div class="project-cat">Développement — PHP</div>
-          <div class="project-title">Formulaire d'inscription HTML / CSS / JS / PHP</div>
-          <a class="table-link" href="https://ahounouevra-png.github.io/Formulaire-PHP/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir la présentation</a>
+          <h3 class="project-title">Formulaire d'inscription HTML / CSS / JS / PHP</h3>
+          <div class="proj-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span></div>
+          <a class="table-link" href="https://ahounouevra-png.github.io/Formulaire-PHP/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Voir la présentation</a>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-img" style="font-size:44px"><i class="fa-solid fa-boxes-packing"></i></div>
+      </article>
+      <article class="project-card">
+        <div class="project-img project-icon"><i class="fa-solid fa-boxes-packing" aria-hidden="true"></i></div>
         <div class="project-body">
           <div class="project-cat">Déploiement — GLPI</div>
-          <div class="project-title">Déploiement de GLPI pour la gestion d'un parc informatique</div>
-          <a class="table-link" href="https://ahounouevra-png.github.io/GLPI/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir la présentation</a>
+          <h3 class="project-title">Déploiement de GLPI pour la gestion d'un parc informatique</h3>
+          <div class="proj-tags"><span class="tag">GLPI</span><span class="tag">ITSM</span><span class="tag">Parc informatique</span></div>
+          <a class="table-link" href="https://ahounouevra-png.github.io/GLPI/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Voir la présentation</a>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-img" style="font-size:44px"><i class="fa-solid fa-hourglass-half"></i></div>
+      </article>
+      <article class="project-card">
+        <div class="project-img project-icon"><i class="fa-brands fa-docker" aria-hidden="true"></i></div>
         <div class="project-body">
           <div class="project-cat">Environnement Docker</div>
-          <div class="project-title">Docker</div>
-          <a class="table-link" href="https://ahounouevra-png.github.io/Dockers-site/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir la présentation</a>
+          <h3 class="project-title">Docker</h3>
+          <div class="proj-tags"><span class="tag">Docker</span><span class="tag">Conteneurs</span></div>
+          <a class="table-link" href="https://ahounouevra-png.github.io/Dockers-site/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Voir la présentation</a>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-img" style="font-size:44px"><i class="fa-solid fa-hourglass-half"></i></div>
-        <div class="project-body">
-          <div class="project-cat">À venir</div>
-          <div class="project-title">Projet à venir...</div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-img" style="font-size:44px"><i class="fa-solid fa-hourglass-half"></i></div>
-        <div class="project-body">
-          <div class="project-cat">À venir</div>
-          <div class="project-title">Projet à venir...</div>
-        </div>
-      </div>
+      </article>
     </div>
 
     <hr class="section-sep">
 
-    <div class="h3-styled"><i class="fa-solid fa-user-gear"></i> Stages</div>
+    <div class="h3-styled"><i class="fa-solid fa-user-gear" aria-hidden="true"></i> Stages</div>
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-img" style="font-size:44px"><i class="fa-solid fa-building"></i></div>
+      <article class="project-card">
+        <div class="project-img project-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
         <div class="project-body">
           <div class="project-cat">Stage 1ʳᵉ année</div>
-          <div class="project-title">Modernisation de la supervision et interconnexion ITSM (IT Service Management, gestion des services informatiques) chez Labocéa</div>
-          <a class="table-link" href="https://ahounouevra-png.github.io/stage/" target="_blank"><i class="fa-solid fa-file-pdf"></i> Voir le document</a>
-        </div> 
-      </div>
-      <div class="project-card">
-        <div class="project-img" style="font-size:44px"><i class="fa-solid fa-hourglass-half"></i></div>
+          <h3 class="project-title">Modernisation de la supervision et interconnexion ITSM (IT Service Management, gestion des services informatiques) chez Labocéa</h3>
+          <div class="proj-tags"><span class="tag">Supervision</span><span class="tag">ITSM</span></div>
+          <a class="table-link" href="https://ahounouevra-png.github.io/stage/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Voir le document</a>
+        </div>
+      </article>
+      <article class="project-card project-card-soon">
+        <div class="project-img project-icon"><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i></div>
         <div class="project-body">
           <div class="project-cat">Stage 2ᵉ année</div>
-          <div class="project-title">À venir...</div>
+          <h3 class="project-title">À venir…</h3>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
@@ -306,68 +325,102 @@
     <h2 class="section-title">Tableau de synthèse</h2>
 
     <div class="pdf-banner">
-      <i class="fa-solid fa-file-pdf" style="font-size:20px; color:#8a6400;"></i>
+      <i class="fa-solid fa-file-pdf pdf-banner-icon" aria-hidden="true"></i>
       <span>Document officiel :</span>
-      <a href="dossier/TABLEAU-DE-SYNTHESE - PDF.pdf" target="_blank">Télécharger le tableau de synthèse (PDF)</a>
+      <a href="dossier/TABLEAU-DE-SYNTHESE - PDF.pdf" target="_blank" rel="noopener">Télécharger le tableau de synthèse (PDF)</a>
     </div>
 
-    <div style="margin-bottom:16px; font-size:13px; color: var(--muted);">
-      <strong style="color:var(--text)">NOM :</strong> AHOUNOU EVRARD &nbsp;|&nbsp;
-      <strong style="color:var(--text)">Centre :</strong> MY DIGITALSCHOOL RENNES &nbsp;|&nbsp;
-      <strong style="color:var(--text)">Option :</strong> SISR &nbsp;|&nbsp;
-      <strong style="color:var(--text)">Session :</strong> 2025-2027
+    <div class="info-row">
+      <div class="info-block">
+        <div class="info-label">Nom</div>
+        <div class="info-val">AHOUNOU Evrard</div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Centre</div>
+        <div class="info-val">My Digital School Rennes</div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Option</div>
+        <div class="info-val">SISR</div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Session</div>
+        <div class="info-val">2025 - 2027</div>
+      </div>
     </div>
   </section>
 
   <!-- VEILLE TECHNOLOGIQUE -->
   <section id="veille">
-    <div class="section-label">Information & Sécurité</div>
-    <h2 class="section-title">Veille Technologique</h2>
+    <div class="section-label">Information &amp; Sécurité</div>
+    <h2 class="section-title">Veille technologique</h2>
 
     <div class="veille-cards">
+      <div class="veille-card veille-card-wide">
+        <div class="v-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+        <h3 class="v-title">Sujet de veille</h3>
+        <p>Suivi régulier des évolutions en cybersécurité, des nouvelles vulnérabilités (CVE) et des recommandations de l'ANSSI, afin d'anticiper les risques et d'appliquer les correctifs et bonnes pratiques adaptés à une infrastructure d'entreprise.</p>
+      </div>
+
       <div class="veille-card">
-        <div class="v-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="v-title">Sujet de Veille</div>
-        <p>Suivi régulier des évolutions en cybersécurité, des nouvelles vulnérabilités (CVE) et des recommandations de l'ANSSI.</p>
+        <div class="v-icon"><i class="fa-solid fa-newspaper" aria-hidden="true"></i></div>
+        <h3 class="v-title">Sources suivies</h3>
+        <ul class="v-list">
+          <li><a href="https://www.cert.ssi.gouv.fr/" target="_blank" rel="noopener">CERT-FR (alertes &amp; avis)</a></li>
+          <li><a href="https://cyber.gouv.fr/" target="_blank" rel="noopener">ANSSI</a></li>
+          <li><a href="https://nvd.nist.gov/" target="_blank" rel="noopener">NVD — base CVE du NIST</a></li>
+          <li><a href="https://www.cybermalveillance.gouv.fr/" target="_blank" rel="noopener">Cybermalveillance.gouv.fr</a></li>
+        </ul>
+      </div>
+
+      <div class="veille-card">
+        <div class="v-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></div>
+        <h3 class="v-title">Ma méthode</h3>
+        <ul class="v-list">
+          <li><strong>Collecter</strong> — consulter les avis et bulletins</li>
+          <li><strong>Trier</strong> — évaluer la criticité (score CVSS)</li>
+          <li><strong>Analyser</strong> — vérifier l'impact sur mes systèmes</li>
+          <li><strong>Appliquer</strong> — correctifs et mesures de protection</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- CERTIFICATIONS -->
   <section id="certifications">
-    <div class="section-label">Badges & diplômes</div>
+    <div class="section-label">Badges &amp; diplômes</div>
     <h2 class="section-title">Certifications</h2>
 
     <div class="cert-grid">
       <div class="cert-card">
-        <div class="cert-icon"><i class="fa-solid fa-desktop"></i></div>
+        <div class="cert-icon"><i class="fa-solid fa-desktop" aria-hidden="true"></i></div>
         <div>
-          <div class="cert-title">IT Hardware Essentials — Niveau 1</div>
+          <h3 class="cert-title">IT Hardware Essentials — Niveau 1</h3>
           <div class="cert-org">Cisco NetAcad · 2025</div>
-          <a class="cert-link" href="https://www.credly.com/badges/4b847b41-3d5a-4a56-bbfe-180bc1c4fec2/public_url" target="_blank">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le badge Credly
+          <a class="cert-link" href="https://www.credly.com/badges/4b847b41-3d5a-4a56-bbfe-180bc1c4fec2/public_url" target="_blank" rel="noopener">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Voir le badge Credly
           </a>
         </div>
       </div>
 
       <div class="cert-card">
-        <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <div class="cert-icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
         <div>
-          <div class="cert-title">Networking Basics — Niveau 1</div>
+          <h3 class="cert-title">Networking Basics — Niveau 1</h3>
           <div class="cert-org">Cisco NetAcad · 2026</div>
-          <a class="cert-link" href="https://www.credly.com/badges/078ef6f2-1343-4c2d-901f-511a7dd6d7bf/public_url" target="_blank">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le badge Credly
+          <a class="cert-link" href="https://www.credly.com/badges/078ef6f2-1343-4c2d-901f-511a7dd6d7bf/public_url" target="_blank" rel="noopener">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Voir le badge Credly
           </a>
         </div>
       </div>
 
       <div class="cert-card">
-        <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="cert-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
         <div>
-          <div class="cert-title">Cybersecurity Essentials — Niveau 1</div>
+          <h3 class="cert-title">Cybersecurity Essentials — Niveau 1</h3>
           <div class="cert-org">Cisco NetAcad · 2025</div>
-          <a class="cert-link" href="https://www.credly.com/badges/0e9faeaa-5ce7-45be-84c4-8d9eedbcecc7/public_url" target="_blank">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le badge Credly
+          <a class="cert-link" href="https://www.credly.com/badges/0e9faeaa-5ce7-45be-84c4-8d9eedbcecc7/public_url" target="_blank" rel="noopener">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Voir le badge Credly
           </a>
         </div>
       </div>
@@ -381,67 +434,97 @@
 
     <div class="cv-section">
       <div class="cv-image-wrap">
-        <img src="image/cv_ahounou-1.jpg" alt="CV d'AHOUNOU Evrard" class="cv-image">
+        <img src="image/cv_ahounou-1.jpg" alt="CV d'AHOUNOU Evrard" class="cv-image" width="1100" height="1556" loading="lazy">
       </div>
-      <a href="dossier/AHOUNOU_EvrardCV.pdf" target="_blank" class="btn-primary">
-        <i class="fa-solid fa-download"></i> Télécharger mon CV complet (PDF)
+      <a href="dossier/AHOUNOU_EvrardCV.pdf" target="_blank" rel="noopener" class="btn-primary">
+        <i class="fa-solid fa-download" aria-hidden="true"></i> Télécharger mon CV complet (PDF)
       </a>
     </div>
   </section>
 
-  
   <!-- CONTACT -->
   <section id="contact">
-  
+    <div class="section-label">Échangeons</div>
     <h2 class="section-title">Contact</h2>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: start;">
-      
-     <!-- Formulaire de contact Formspree via AJAX -->
-<div class="glass-card">
-  <form id="my-form" action="https://formspree.io/f/mqerooyq" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
-    
-    <div>
-      <label for="name" style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 6px;">Votre Nom / Prénom</label>
-      <input type="text" id="name" name="name" required placeholder="Ex: Jean marcus " style="width: 100%; padding: 12px 14px; border: 2px solid var(--ink); border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; background: #fff;">
-    </div>
+    <div class="contact-layout">
 
-    <div>
-      <label for="email" style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 6px;">Votre Email</label>
-      <input type="email" id="email" name="_replyto" required placeholder="votre@email.com" style="width: 100%; padding: 12px 14px; border: 2px solid var(--ink); border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; background: #fff;">
-    </div>
+      <!-- Formulaire de contact (Formspree, envoi AJAX) -->
+      <div class="glass-card">
+        <form id="my-form" action="https://formspree.io/f/mqerooyq" method="POST" class="contact-form">
+          <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+          <!-- Champ piège anti-spam : doit rester vide -->
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-    <div>
-      <label for="message" style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 6px;">Votre Message</label>
-      <textarea id="message" name="message" rows="5" required placeholder="Bonjour Evrard, je vous contacte concernant..." style="width: 100%; padding: 12px 14px; border: 2px solid var(--ink); border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; resize: vertical; background: #fff;"></textarea>
-    </div>
+          <div class="form-field">
+            <label for="name">Votre nom / prénom</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Ex : Jean Marcus">
+          </div>
 
-    <button id="my-form-button" type="submit" class="btn-primary" style="justify-content: center; cursor: pointer; border: 2px solid var(--ink); margin-top: 6px;">
-      <i class="fa-solid fa-paper-plane"></i> Envoyer le message
-    </button>
+          <div class="form-field">
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="_replyto" required autocomplete="email" placeholder="votre@email.com">
+          </div>
 
-    <!-- Zone d'affichage du résultat -->
-    <p id="my-form-status" style="font-size: 14px; font-weight: 700; text-align: center; margin-top: 10px;"></p>
+          <div class="form-field">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Bonjour Evrard, je vous contacte concernant…"></textarea>
+          </div>
 
-  </form>
-</div>
+          <button id="my-form-button" type="submit" class="btn-primary btn-block">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Envoyer le message
+          </button>
 
+          <p class="form-note">Vos données ne servent qu'à répondre à votre message. <a href="#mentions" data-section="mentions">En savoir plus</a></p>
+
+          <!-- Zone d'affichage du résultat -->
+          <p id="my-form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
 
       <!-- Liens de contact rapide -->
-      <div class="contact-grid" style="grid-template-columns: 1fr; margin-bottom: 0;">
-        <a href="https://linkedin.com" target="_blank" class="contact-item">
-          <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+      <div class="contact-grid contact-grid-single">
+        <!-- TODO : remplacer l'URL ci-dessous par celle de ton profil LinkedIn, puis retirer ces balises de commentaire
+        <a href="https://www.linkedin.com/in/TON-PROFIL/" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></div>
           <div class="contact-label">LinkedIn</div>
           <div class="contact-val">Voir mon profil LinkedIn</div>
         </a>
+        -->
 
-        <a href="ahounouevrard04@gmail.com" class="contact-item">
-          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+        <a href="mailto:ahounouevrard04@gmail.com" class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
           <div class="contact-label">Email direct</div>
-          <div class="contact-val">Ouvrir mon mail</div>
+          <div class="contact-val">ahounouevrard04@gmail.com</div>
+        </a>
+
+        <a href="https://github.com/ahounouevra-png" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-val">ahounouevra-png</div>
         </a>
       </div>
 
+    </div>
+  </section>
+
+  <!-- MENTIONS LÉGALES / CONFIDENTIALITÉ / CRÉDITS -->
+  <section id="mentions">
+    <div class="section-label">Informations</div>
+    <h2 class="section-title">Mentions légales, confidentialité &amp; crédits</h2>
+
+    <div class="glass-card legal">
+      <h3>Éditeur du site</h3>
+      <p>Site personnel à but pédagogique et professionnel, édité par AHOUNOU Evrard, étudiant en BTS SIO option SISR à My Digital School Rennes. Contact : <a href="mailto:ahounouevrard04@gmail.com">ahounouevrard04@gmail.com</a>.</p>
+
+      <h3>Hébergement</h3>
+      <p>Site hébergé par GitHub Pages — GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+
+      <h3>Données personnelles</h3>
+      <p>Le formulaire de contact collecte votre nom, votre adresse email et votre message dans le seul but de vous répondre. Ces informations sont transmises via le service Formspree et ne sont ni revendues ni utilisées à d'autres fins. Vous pouvez demander leur suppression à tout moment en écrivant à l'adresse ci-dessus. Ce site ne dépose pas de cookies de suivi publicitaire.</p>
+
+      <h3>Crédits et licences</h3>
+      <p>Icônes : <a href="https://fontawesome.com" target="_blank" rel="noopener">Font Awesome</a> (licence CC BY 4.0). Polices : Poppins et DM Sans via Google Fonts (licence SIL OFL). Photos et captures : réalisations personnelles. Les marques citées (Cisco, Proxmox, Docker, etc.) appartiennent à leurs propriétaires respectifs.</p>
     </div>
   </section>
 
@@ -453,43 +536,45 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-name">AHOUNOU Evrard</div>
-        <div class="footer-role">Technicien Support IT</div>
+        <div class="footer-role">Étudiant BTS SIO · SISR</div>
         <p class="footer-tagline">Étudiant en BTS SIO, option SISR. Passionné par l'administration réseau, les systèmes et la cybersécurité.</p>
       </div>
       <ul class="footer-legal">
-        <li><a href="#">Politique de confidentialité</a></li>
-        <li><a href="#">Crédits et licences</a></li>
-        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#mentions" data-section="mentions">Politique de confidentialité</a></li>
+        <li><a href="#mentions" data-section="mentions">Crédits et licences</a></li>
+        <li><a href="#mentions" data-section="mentions">Mentions légales</a></li>
       </ul>
     </div>
 
     <div class="footer-copy">© 2026 Portfolio AHOUNOU Evrard. Tous droits réservés.</div>
 
-    <nav class="footer-nav">
-      <button onclick="showSection('presentation')">Présentation</button>
-      <button onclick="showSection('projets')">Projets</button>
-      <button onclick="showSection('contact')">Contact</button>
+    <nav class="footer-nav" aria-label="Navigation secondaire">
+      <button data-section="presentation">Présentation</button>
+      <button data-section="projets">Projets</button>
+      <button data-section="contact">Contact</button>
     </nav>
   </div>
 </footer>
 
 <!-- BOTTOM TAB BAR (Mobile) -->
-<div class="tabbar">
+<nav class="tabbar" aria-label="Navigation mobile">
   <div class="tabbar-inner">
-    <button class="tab-btn active" onclick="showSection('accueil')"><i class="fa-solid fa-house tic"></i>Accueil</button>
-    <button class="tab-btn" onclick="showSection('presentation')"><i class="fa-solid fa-user tic"></i>Présentation</button>
-    <button class="tab-btn" onclick="showSection('competences')"><i class="fa-solid fa-wrench tic"></i>Compétences</button>
-    <button class="tab-btn" onclick="showSection('projets')"><i class="fa-solid fa-briefcase tic"></i>Projets</button>
-    <button class="tab-btn" onclick="showSection('synthese')"><i class="fa-solid fa-chart-column tic"></i>Synthèse</button>
-    <button class="tab-btn" onclick="showSection('contact')"><i class="fa-solid fa-envelope tic"></i>Contact</button>
+    <button class="tab-btn active" data-section="accueil"><i class="fa-solid fa-house tic" aria-hidden="true"></i>Accueil</button>
+    <button class="tab-btn" data-section="presentation"><i class="fa-solid fa-user tic" aria-hidden="true"></i>Présentation</button>
+    <button class="tab-btn" data-section="competences"><i class="fa-solid fa-wrench tic" aria-hidden="true"></i>Compétences</button>
+    <button class="tab-btn" data-section="projets"><i class="fa-solid fa-briefcase tic" aria-hidden="true"></i>Projets</button>
+    <button class="tab-btn" data-section="synthese"><i class="fa-solid fa-chart-column tic" aria-hidden="true"></i>Synthèse</button>
+    <button class="tab-btn" data-section="veille"><i class="fa-solid fa-magnifying-glass tic" aria-hidden="true"></i>Veille</button>
+    <button class="tab-btn" data-section="certifications"><i class="fa-solid fa-award tic" aria-hidden="true"></i>Certifs</button>
+    <button class="tab-btn" data-section="cv"><i class="fa-solid fa-file-lines tic" aria-hidden="true"></i>CV</button>
+    <button class="tab-btn" data-section="contact"><i class="fa-solid fa-envelope tic" aria-hidden="true"></i>Contact</button>
   </div>
-</div>
-
+</nav>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <button class="lightbox-close" onclick="closeLightbox(event)"><i class="fa-solid fa-xmark"></i></button>
-  <div class="lightbox-content" onclick="event.stopPropagation()">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" aria-hidden="true">
+  <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Fermer"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+  <div class="lightbox-content">
     <img id="lightbox-img" src="" alt="">
     <div class="lightbox-caption">
       <div class="lightbox-cat" id="lightbox-cat"></div>
@@ -499,7 +584,7 @@
   </div>
 </div>
 
-<!-- Script du portfolio : navigation + formulaire de contact (voir js/script.js) -->
+<!-- Script du portfolio : navigation + lightbox + formulaire (voir js/script.js) -->
 <script src="js/script.js" defer></script>
 
 </body>
