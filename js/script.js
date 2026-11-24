@@ -25,8 +25,34 @@ function isSection(id) {
   return !!el && el.tagName === 'SECTION';
 }
 
+// Sous-onglets de la section Projets : #projets, #projets-e5, #projets-e6, #projets-stages
+const SUBTABS = ['general', 'e5', 'e6', 'stages'];
+const SUBTAB_TITLES = { general: 'Projets', e5: 'Projet E5', e6: 'Projet E6', stages: 'Stages' };
+
+function showSubtab(key, focus = false) {
+  if (!SUBTABS.includes(key)) key = 'general';
+  document.querySelectorAll('.subtab').forEach(b => {
+    const on = b.dataset.subtab === key;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+    b.tabIndex = on ? 0 : -1;
+    if (on && focus) b.focus();
+  });
+  document.querySelectorAll('.subpanel').forEach(p => {
+    const on = p.id === 'panel-' + key;
+    p.classList.toggle('active', on);
+    p.hidden = !on;
+  });
+  return key;
+}
+
 function showSection(id, updateHistory = true) {
+  // « projets-e5 » => section « projets » + sous-onglet « e5 »
+  let sub = null;
+  const m = /^projets-(general|e5|e6|stages)$/.exec(id || '');
+  if (m) { sub = m[1]; id = 'projets'; }
   if (!isSection(id)) id = 'accueil';
+  if (id === 'projets') sub = showSubtab(sub || 'general');
 
   document.querySelectorAll('section').forEach(s => s.classList.toggle('active', s.id === id));
 
@@ -40,10 +66,11 @@ function showSection(id, updateHistory = true) {
     }
   });
 
-  document.title = 'AHOUNOU Evrard — ' + (SECTION_TITLES[id] || 'Portfolio');
+  document.title = 'AHOUNOU Evrard — ' + (id === 'projets' ? SUBTAB_TITLES[sub] : (SECTION_TITLES[id] || 'Portfolio'));
 
-  if (updateHistory && location.hash !== '#' + id) {
-    try { history.pushState(null, '', '#' + id); } catch (e) { location.hash = id; }
+  const hash = id === 'projets' && sub !== 'general' ? 'projets-' + sub : id;
+  if (updateHistory && location.hash !== '#' + hash) {
+    try { history.pushState(null, '', '#' + hash); } catch (e) { location.hash = hash; }
   }
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
@@ -54,6 +81,28 @@ document.addEventListener('click', (e) => {
   if (!trigger) return;
   e.preventDefault();
   showSection(trigger.dataset.section);
+});
+
+// Clic / clavier (flèches) sur les sous-onglets
+document.addEventListener('click', (e) => {
+  const tab = e.target.closest('.subtab');
+  if (!tab) return;
+  const key = tab.dataset.subtab;
+  showSubtab(key);
+  document.title = 'AHOUNOU Evrard — ' + SUBTAB_TITLES[key];
+  const hash = key === 'general' ? 'projets' : 'projets-' + key;
+  if (location.hash !== '#' + hash) {
+    try { history.pushState(null, '', '#' + hash); } catch (_) { location.hash = hash; }
+  }
+});
+document.addEventListener('keydown', (e) => {
+  const tab = e.target.closest && e.target.closest('.subtab');
+  if (!tab || !['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+  e.preventDefault();
+  const i = SUBTABS.indexOf(tab.dataset.subtab);
+  const next = SUBTABS[(i + (e.key === 'ArrowRight' ? 1 : SUBTABS.length - 1)) % SUBTABS.length];
+  document.querySelector('.subtab[data-subtab="' + next + '"]').click();
+  document.getElementById('subtab-' + next).focus();
 });
 
 window.addEventListener('popstate', () => showSection(location.hash.slice(1), false));
