@@ -1318,3 +1318,70 @@ section.active .skill-group:nth-of-type(4) { animation-delay: 0.21s; }
 }
 
 .project-body .project-cat { align-self: flex-start; }
+
+/* ============================================================
+   PROJETS — sous-onglets (Projets / Projet E5 / Projet E6)
+   ============================================================ */
+.subtabs {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  padding: 6px; margin-bottom: 32px;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 16px; box-shadow: var(--shadow-sm);
+  width: fit-content; max-width: 100%;
+}
+.subtab {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border: 0; border-radius: 11px;
+  background: transparent; color: var(--muted);
+  font: 500 14.5px 'DM Sans', sans-serif; cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.subtab:hover { color: var(--ink); background: var(--paper); }
+.subtab.active { background: var(--grad); color: #fff; box-shadow: var(--glow); }
+.subtab:focus-visible { outline: 2px solid #4f6df5; outline-offset: 2px; }
+.subtab-badge {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 999px; background: var(--sand-bg); color: var(--sand);
+}
+.subtab.active .subtab-badge { background: rgba(255,255,255,.22); color: #fff; }
+
+.subpanel { display: none; }
+.subpanel.active { display: block; animation: subIn .35s ease both; }
+@keyframes subIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.epreuve-intro {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  padding: 24px 26px; margin-bottom: 34px;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 20px; box-shadow: var(--shadow-sm);
+}
+.epreuve-icon {
+  width: 56px; height: 56px; flex: none; border-radius: 16px;
+  display: grid; place-items: center; font-size: 24px;
+  background: var(--grad-soft); color: #4f6df5;
+}
+.epreuve-intro > div:nth-child(2) { flex: 1 1 280px; min-width: 0; }
+.epreuve-kicker { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.epreuve-title { margin: 4px 0 6px; font: 700 20px 'Poppins', sans-serif; color: var(--ink); }
+.epreuve-desc { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+
+.status-pill {
+  display: inline-flex; align-items: center; gap: 7px; flex: none;
+  padding: 7px 14px; border-radius: 999px;
+  background: var(--sand-bg); color: var(--sand);
+  font-size: 13px; font-weight: 700;
+}
+.status-pill-sm { align-self: flex-start; padding: 4px 10px; font-size: 12px; margin-bottom: 12px; }
+
+.project-desc { margin: 0 0 10px; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+.project-card-wip { border-color: var(--sand); }
+.project-card-add .project-img { border-bottom: 2px dashed var(--line); }
+.project-card-add { border: 2px dashed var(--line); box-shadow: none; }
+
+@media (max-width: 600px) {
+  .subtabs { width: 100%; }
+  .subtab { flex: 1 1 auto; justify-content: center; padding: 10px 12px; font-size: 13.5px; }
+  .subtab-badge { display: none; }
+  .status-pill { order: 3; }
+}
+@media (prefers-reduced-motion: reduce) { .subpanel.active { animation: none; } }
